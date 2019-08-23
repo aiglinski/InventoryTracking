@@ -58,7 +58,7 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
     const ui = new UI();
     ui.deleteBook(e.target);
 
-    if (title === '' || author === '' || isbn === '') {
+    if (title === '' || author === '' || isbn == '') {
         ui.showAlert('Sorry, Please fill in Fields correctly', 'error');
     } else {
         // add book to list
@@ -76,4 +76,4 @@ document.getElementById('book-list').addEventListener('click', function (e) {
     ui.deleteBook(e.target);
     ui.showAlert('Book removed', 'success')
     e.preventDefault();
-})
+});
